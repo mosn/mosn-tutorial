@@ -1,6 +1,6 @@
 {
-  "title": "Learn MOSN with Istio using Interactive Browser-Based Scenarios",
-  "description": "Learn MOSN and Istio without downloads or configuration.",
+  "title": "MOSN Tutorial",
+  "description": "Learn MOSN with Istio using Interactive Browser-Based Scenarios",
   "courses": [
     {
       "course_id": "mosn-with-istio",
