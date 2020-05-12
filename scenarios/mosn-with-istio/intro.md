@@ -1,16 +1,15 @@
-在本节课中，您会收获如何使用 MOSN 作为 Istio 的数据面进行服务治理。
+In this course, you will learn how to use MOSN as the data plane of Istio for service governance.
 
-MOSN 简介
+If you want to contribute or learn more about this tutorial, please join the [MOSN Istio WG](https://github.com/mosn/community/blob/master/wg-istio.md).
 
-MOSN（Modular Open Smart Network） Go 语言开发的网络代理软件，作为云原生的网络数据平面，旨在为服务提供多协议，模块化，智能化，安全的代理能力。
+## MOSN Introduction
 
-MOSN 开源 Github 仓库地址： https://github.com/mosn/mosn
+MOSN is a network proxy written in Golang. It can be used as a cloud-native network data plane, providing services with the following proxy functions: multi-protocol, modular, intelligent, and secure. MOSN can be integrated with any Service Mesh which support xDS API. It can also be used as an independent Layer 4 or Layer 7 load balancer, API Gateway, cloud-native Ingress, etc.
 
-Istio 简介
+- Github: https://github.com/mosn/mosn
+- Website: https://mosn.io
 
-作为云原生 Service Mesh 的标准控制面，为其数据面 MOSN/Envoy 提供服务配置信息。
+## MOSN with Istio
 
-Istio 开源 Github 仓库地址：https://github.com/istio/istio
+[Istio](https://github.com/istio/istio) is the most popular Service Mesh, it use [Envoy](https://envoyproxy.io) as the default data plane, MOSN is aim to be the alternative cloud native data plane that support Enovy’s xDS.
 
-
-另外如果您对《 MOSN with Istio 》有相关需求，欢迎加入 [wg-istio](https://github.com/mosn/community/blob/master/wg-istio.md) 交流。

@@ -1,6 +1,6 @@
 {
   "title": "MOSN with Istio",
-  "description": "使用 MOSN 作为 Istio 的数据面来演示 Bookinfo 示例。",
+  "description": "Run the Bookinfo sample using MOSN as data plane with Istio.",
   "difficulty": "Intermediate",
   "time": "15 min",
   "details": {
