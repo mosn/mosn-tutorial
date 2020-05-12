@@ -3,7 +3,7 @@
   "description": "使用 MOSN 作为 Istio 的数据面来演示 BookInfo 示例。",
   "courses": [
     {
-      "course_id": "mosn_with_istio-scenario",
+      "course_id": "mosn-with-istio",
       "title": "MOSN with Istio",
       "description": "使用 MOSN 作为 Istio 的数据面来演示 BookInfo 示例。"
     }
