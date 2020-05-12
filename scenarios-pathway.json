@@ -1,11 +1,11 @@
 {
-  "title": "MOSN with Istio",
-  "description": "使用 MOSN 作为 Istio 的数据面来演示 BookInfo 示例。",
+  "title": "Learn MOSN with Istio using Interactive Browser-Based Scenarios",
+  "description": "Learn MOSN and Istio without downloads or configuration.",
   "courses": [
     {
       "course_id": "mosn-with-istio",
       "title": "MOSN with Istio",
-      "description": "使用 MOSN 作为 Istio 的数据面来演示 BookInfo 示例。"
+      "description": "Run the Bookinfo sample using MOSN as data plane with Istio."
     }
   ]
 }
