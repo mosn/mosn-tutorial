@@ -18,7 +18,7 @@ Verify that all services and pods are up and running normally and check their st
 
 When the above status is Running, you can verify that the Bookinfo application is running properly by:
 
-`kubectl exec -it $(kubectl get pod -l app=ratings -o jsonpath='{.items[0].metadata.name}') -c ratings -- curl productpage:9080/productpage | grep -o "<title>. *</title>”`{{execute}}
+`kubectl exec -it $(kubectl get pod -l app=ratings -o jsonpath='{.items[0].metadata.name}') -c ratings -- curl productpage:9080/productpage | grep -o "<title>. *</title>"`{{execute}}
 
 ## Deploy gateway
 
@@ -46,7 +46,7 @@ Set `GATEWAY_URL`.
 
 The curl command can be used to confirm that the Bookinfo application can be accessed from outside the cluster:.
 
-`curl -s http://${GATEWAY_URL}/productpage | grep -o "<title>. *</title>”`{{execute}}
+`curl -s http://${GATEWAY_URL}/productpage | grep -o "<title>. *</title>"`{{execute}}
 
 It can be viewed by clicking on the following link.
 
