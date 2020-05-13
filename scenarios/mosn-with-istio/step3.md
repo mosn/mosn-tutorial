@@ -6,7 +6,7 @@ Use the `default` profile to quickly install istio.
 
 Specify `MOSN` as the data surface in the `istioctl` command via the parameters of the istioctl command.
 
-`istioctl manifest apply --set .values.global.proxy.image="mosnio/proxyv2:1.5.2-mosn" --set meshConfig.defaultConfig.binaryPath="/usr/local/bin/mosn”`{{execute}}
+`istioctl manifest apply --set .values.global.proxy.image="mosnio/proxyv2:1.5.2-mosn" --set meshConfig.defaultConfig.binaryPath="/usr/local/bin/mosn"`{{execute}}
 
 Check that the Kubernetes service is deployed properly and that all services other than the `jaeger-agent` service have the correct `CLUSTER-IP`.
 
