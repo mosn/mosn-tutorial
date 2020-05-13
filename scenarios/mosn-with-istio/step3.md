@@ -1,6 +1,36 @@
+本教程提供中文版说明，请翻至本页底部。
+
+Use the `default` profile to quickly install istio.
+
+## Setup istio
+
+Specify `MOSN` as the data surface in the `istioctl` command via the parameters of the istioctl command.
+
+`istioctl manifest apply --set .values.global.proxy.image="mosnio/proxyv2:1.5.2-mosn" --set meshConfig.defaultConfig.binaryPath="/usr/local/bin/mosn”`{{execute}}
+
+Check that the Kubernetes service is deployed properly and that all services other than the `jaeger-agent` service have the correct `CLUSTER-IP`.
+
+**Note**: Here to observe the `EXTERNAL-IP` of `istio-ingressgateway`, if it is `<pending>`, the environment is temporarily unable to provide external load balancing properly and cannot use ingress gateway. In this case, you can wait for some time, if after some time it is still `<pending>` state, it is recommended to refresh the page and reopen the course:
+
+`kubectl get svc -n istio-system`{{execute}}
+
+Check that the pod in related has been successfully deployed and that `STATUS` is `Running`.
+
+**Note**: If it is observed that the `STATUS` of the pod `prometheus-xxx` is `InvalidImageName,` it can be ignored for now, due to a bug in Istio that currently fixes the [PR](https://github.com/istio/istio/pull/22464) that has merged into the trunk.
+
+`kubectl get pods -n istio-system`{{execute}}
+
+If all of the above is normal, then the istio has been successfully installed and is ready to deploy its own service later.
+
+## Next steps
+
+Once the deployment is successful, you can go to the Bookinfo example.
+
+---
+
 使用 `default` 配置快速安装一套 istio。
 
-### 安装 istio 示例
+## 安装 istio 示例
 
 通过 `istioctl` 命令的参数指定 `MOSN` 作为 istio 中的数据面：
 
@@ -20,7 +50,6 @@
 
 如果上述都正常，则表示 istio 已经成功安装，后面就可以部署自己的服务了。
 
-### 后续步骤
+## 后续步骤
 
 部署成功后，就可以进入 Bookinfo 示例了。
-

@@ -1,3 +1,48 @@
+本教程提供中文版说明，请翻至本页底部。
+
+## Verify MOSN's fault injection functionality
+
+### Initial state preparation
+
+Run the following command to initialize the Bookinfo application version routing information.
+
+`kubectl apply -f samples/bookinfo/networking/virtual-service-all-v1.yaml`{{execute}}
+`kubectl apply -f samples/bookinfo/networking/virtual-service-reviews-test-v2.yaml`{{execute}}
+
+After the above configuration, the request link is as follows.
+
+productpage → reviews:v2 → ratings (for jason users)
+productpage → reviews:v1 (other users)
+
+### Injection delay failure
+
+Executing the following command will inject a 7-second delay between the reviews:v2 and ratings services for user jason:.
+
+`kubectl apply -f samples/bookinfo/networking/virtual-service-ratings-test-delay.yaml`{{execute}}
+
+Click on the following link.
+
+https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/productpage
+
+At this point it was discovered that when logging in to access using jason as a user, the Reviews section showed an error message.
+
+Error fetching product reviews!
+Sorry, product reviews are currently unavailable for this book.
+
+Executing the following command will introduce an HTTP abort for user jason to access the ratings microservice.
+
+`kubectl apply -f samples/bookinfo/networking/virtual-service-ratings-test-abort.yaml`{{execute}}
+
+Click on the following link.
+
+https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/productpage
+
+When you log in with jason, the following error message is displayed:
+
+Ratings service is currently unavailable
+
+---
+
 ## 验证 MOSN 的故障注入功能
 
 #### 初始状态准备

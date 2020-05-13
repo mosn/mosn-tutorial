@@ -1,3 +1,34 @@
+本教程提供中文版说明，请翻至本页底部。
+
+Starting with istio v1.5.x, the way of using [helm installation](https://istio.io/docs/setup/install/helm/) has been deprecated and requires [istioctl installation](https://istio.io/docs/setup/install/istioctl/) instead.
+
+## Download istio
+
+A zip file that matches your operating system can be downloaded on the istio release page, which contains: installation files, examples, and istioctl command line tools.
+
+Use the following command to download istio:.
+
+`export ISTIO_VERSION=1.5.2 && curl -L https://raw.githubusercontent.com/istio/istio/release-1.5/release/downloadIstioCandidate.sh | sh -`{{execute}}
+
+The downloaded istio package is named `istio-1.5.2` and contains.
+
+- `install/kubernetes`: Contains the YAML installation file associated with Kubernetes.
+- `examples/`: Contains sample applications.
+- `bin/`: Client file containing istioctl.
+
+Switch to the directory where the istio package is located:.
+`cd istio-$ISTIO_VERSION/`{{execute}}
+
+Add the istioctl client path to the `$PATH` using the following command.
+`export PATH=PATH:$(pwd)/bin`{{execute}}
+
+As of now, we have been able to flexibly customize Istio control plane and data plane configuration parameters using the istioctl command line tool. The command line tool has a user input validation feature that prevents incorrect installation and customization options.
+
+See more information about istioctl using the following command.
+`istioctl -h`{{execute}}
+
+---
+
 从 istio v1.5.x 版本开始，官方已经废弃了[使用 helm 安装](https://istio.io/zh/docs/setup/install/helm/)的方式，需改用 [istioctl 安装](https://istio.io/zh/docs/setup/install/istioctl/)。
 
 ## 下载 istio
@@ -16,7 +47,7 @@
 切换到 istio 包所在目录：
 `cd istio-$ISTIO_VERSION/`{{execute}}
 
-使用如下命令将 `istioctl` 客户端路径加入 $PATH 中：
+使用如下命令将 `istioctl` 客户端路径加入 `$PATH` 中：
 `export PATH=$PATH:$(pwd)/bin`{{execute}}
 
 截止目前，我们已经可以通过 `istioctl` 命令行工具来灵活的自定义 Istio 控制平面和数据平面配置参数。 该命令行工具具有用户输入校验功能，可以防止错误的安装和自定义选项。
