@@ -12,10 +12,15 @@ Remove the routing rules and destroy the applied Pod.
 
 Confirmation that the Bookinfo application has been shut down.
 
-`kubectl get virtualservices`{{execute}} #-- there should be no virtual services
-`kubectl get destinationrules`{{execute}} #-- there should be no destination rules
-`kubectl get gateway`{{execute}} #-- there should be no gateway
-`kubectl get pods`{{execute}} #-- the Bookinfo pods should be deleted
+`kubectl get virtualservices`{{execute}}
+
+`kubectl get destinationrules`{{execute}}
+
+`kubectl get gateway`{{execute}}
+
+`kubectl get pods`{{execute}}
+
+Bookinfo related resources should be deleted.
 
 Now that the cleanup of the Bookinfo application is complete, let's introduce the Istio uninstallation method.
 
@@ -34,9 +39,9 @@ EOF `{{execute}}
 
 确认 Bookinfo 应用已经关停：
 
-`kubectl get virtualservices`{{execute}}   #-- there should be no virtual services
-`kubectl get destinationrules`{{execute}}  #-- there should be no destination rules
-`kubectl get gateway`{{execute}}           #-- there should be no gateway
-`kubectl get pods`{{execute}}              #-- the Bookinfo pods should be deleted
+`kubectl get virtualservices`{{execute}} 
+`kubectl get destinationrules`{{execute}}
+`kubectl get gateway`{{execute}}
+`kubectl get pods`{{execute}}    
 
 至此， Bookinfo 应用的相关清理工作已经完成，接下来介绍下 Istio 卸载方法。
