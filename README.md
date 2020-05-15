@@ -8,7 +8,7 @@ Source code of MOSN and Istio Service Mesh tutorial for [KataCoda](https://www.k
 
 Here are the courses we have supported in the list.
 
-- [MOSN with Istio](https://katacoda.com/mosn/courses/scenarios/mosn-with-istio)
+- [MOSN with Istio](https://katacoda.com/mosn/courses/istio/mosn-with-istio)
 
 ## Contribute
 
