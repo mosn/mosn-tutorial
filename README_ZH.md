@@ -12,5 +12,5 @@ MOSN 和 Istio 用于 [KataCoda](https://katacoda.com/mosn) 教程的源码。
 
 ## 如何贡献
 
-- [Create Interactive Katacoda Scenarios](https://katacoda.com/create)
+- 请参考[贡献手册](contributing_zh.md)
 
