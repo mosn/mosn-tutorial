@@ -9,8 +9,8 @@
     },
     {
       "course_id": "istio-mosn-adapt-dubbo",
-      "title": "Istio with Mosn adapt dubbo",
-      "description": "Dubbo demo run with Mosn in Istio env."
+      "title": "Istio with MOSN adapt dubbo",
+      "description": "Dubbo demo run with MOSN in Istio env."
     }
   ]
 }
