@@ -20,7 +20,7 @@ Switch to the directory where the istio package is located:.
 `cd istio-$ISTIO_VERSION/`{{execute}}
 
 Add the istioctl client path to the `$PATH` using the following command.
-`export PATH=PATH:$(pwd)/bin`{{execute}}
+`export PATH=$PATH:$(pwd)/bin`{{execute}}
 
 As of now, we have been able to flexibly customize Istio control plane and data plane configuration parameters using the istioctl command line tool. The command line tool has a user input validation feature that prevents incorrect installation and customization options.
 
