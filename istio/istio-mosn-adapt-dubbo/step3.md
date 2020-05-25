@@ -4,7 +4,7 @@
 
 Because not Adapter watch registry centry, use create ServiceEntry replace it.
 
-Install ServiceEntry resource with yaml: `kubectl apply -f https://raw.githubusercontent.com/champly/mosn/feature-istio-dubbo_adapter/examples/codes/dubbo/xds/serviceentry.yaml`{{execute}}
+Install ServiceEntry resource with yaml: `kubectl apply -f https://raw.githubusercontent.com/mosn/mosn-tutorial/master/istio/istio-mosn-adapt-dubbo/install/serviceentry.yaml`{{execute}}
 
 Rewrite provider really ip: `kubectl edit serviceentry dubbo-app-se`{{execute}}
 
@@ -25,7 +25,7 @@ master $ kubectl get serviceentry dubbo-app-se -o jsonpath='{ .spec.endpoints }'
 
 由于没有 Adapter Watch 注册中心，所以使用创建 ServiceEntry 代替
 
-使用 yaml 文件安装 ServiceEntry 资源: `kubectl apply -f https://raw.githubusercontent.com/champly/mosn/feature-istio-dubbo_adapter/examples/codes/dubbo/xds/serviceentry.yaml`{{execute}}
+使用 yaml 文件安装 ServiceEntry 资源: `kubectl apply -f https://raw.githubusercontent.com/mosn/mosn-tutorial/master/istio/istio-mosn-adapt-dubbo/install/serviceentry.yaml`{{execute}}
 
 替换 provider 真正的 IP: `kubectl edit serviceentry dubbo-app-se`{{execute}}
 

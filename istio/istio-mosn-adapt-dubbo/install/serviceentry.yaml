@@ -1,0 +1,18 @@
+# apiVersion: networking.istio.io/v1beta1
+apiVersion: networking.istio.io/v1alpha3
+kind: ServiceEntry
+metadata:
+  name: dubbo-app-se
+spec:
+  hosts:
+    - mosn.io.dubbo.DemoService
+  ports:
+    - number: 20882
+      name: dubbo-app-se
+      protocol: TCP
+  location: MESH_INTERNAL
+  resolution: STATIC
+  endpoints:
+    - address: 10.13.141.102
+    - address: 10.13.141.78
+    - address: 10.13.141.190

@@ -4,7 +4,7 @@
 
 Create namespace: `kubectl create namespace dubbo-app`{{execute}}
 
-Use yaml install provider: `kubectl apply -f https://raw.githubusercontent.com/champly/mosn/feature-istio-dubbo_adapter/examples/codes/dubbo/xds/provider/install.yaml`{{execute}}
+Use yaml install provider: `kubectl apply -f https://raw.githubusercontent.com/mosn/mosn-tutorial/master/istio/istio-mosn-adapt-dubbo/install/provider/install.yaml`{{execute}}
 
 Wait a minute later. Check all provider start succ for Status `Running` and Pod IP not `<none>`: `kubectl get pods -o wide -n dubbo-app -l app=provider`{{execute}}
 
@@ -26,7 +26,7 @@ Remember this Pod IP:  10.32.0.11, 10.32.0.3, 10.32.0.12
 
 创建 Namespace: `kubectl create namespace dubbo-app`{{execute}}
 
-使用 yaml 文件安装provider: `kubectl apply -f https://raw.githubusercontent.com/champly/mosn/feature-istio-dubbo_adapter/examples/codes/dubbo/xds/provider/install.yaml`{{execute}}
+使用 yaml 文件安装provider: `kubectl apply -f https://raw.githubusercontent.com/mosn/mosn-tutorial/master/istio/istio-mosn-adapt-dubbo/install/provider/install.yaml`{{execute}}
 
 等待几分钟，检查 Provider 运行成功，状态为 `Running`、 Pod IP 不为 `<none>`, `kubectl get pods -o wide -n dubbo-app -l app=provider`{{execute}}
 
