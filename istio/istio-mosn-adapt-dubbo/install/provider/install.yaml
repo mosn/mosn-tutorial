@@ -31,12 +31,12 @@ spec:
     spec:
       containers:
       - name: provider
-        image: registry.cn-hangzhou.aliyuncs.com/sink-demo/dubbo-provider:v0.0.1
+        image: champly/dubbo-provider:v0.0.1
         imagePullPolicy: Always
         ports:
         - containerPort: 20880
       - name: istio-proxy
-        image: registry.cn-hangzhou.aliyuncs.com/sink-demo/mosn:v0.0.2
+        image: champly/mosn:v0.0.2
         imagePullPolicy: Always
         args:
         - start

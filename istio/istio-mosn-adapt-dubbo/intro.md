@@ -4,10 +4,6 @@ In this course, you will learn how to use MOSN as the data plane of Istio for ad
 
 If you want to contribute or learn more about this tutorial, please join the [MOSN Istio WG](https://github.com/mosn/community/blob/master/wg-istio.md).
 
-Data plane flow diagram:
-
-![image](https://github.com/mosn/mosn-tutorial/blob/master/istio/istio-mosn-adapt-dubbo/install/img/mosn-dubbo.png)
-
 ---
 
 在本课程中，您将了解如何将 MOSN 作为 Istio Service Mesh 中的数据平面以用于适配 Dubbo 的场景。
@@ -16,4 +12,4 @@ Data plane flow diagram:
 
 数据面流程图:
 
-![image](https://github.com/mosn/mosn-tutorial/blob/master/istio/istio-mosn-adapt-dubbo/install/img/mosn-dubbo.png)
+![image](./install/img/mosn-dubbo.png)
