@@ -2,7 +2,10 @@
 
 ## Consumer's Log
 
-Look at Consumer running log: `kubectl logs -f -n dubbo-app ``kubectl get pod -n dubbo-app -l app=consumer -o jsonpath='{ .items[*].metadata.name }'`` -c consumer`{{execute}}
+Look at Consumer running log: 
+
+- `export CONSUMER_POD=$(kubectl get pod -n dubbo-app -l app=consumer -o jsonpath='{ .items[*].metadata.name }')`{{execute}}
+- `kubectl logs -f -n dubbo-app $CONSUMER_POD -c consumer`{{execute}}
 
 If it good well, you can get this result, such as:
 
@@ -38,7 +41,10 @@ Consumer will request three provider.
 
 ## Consumer 日志
 
-查看 Consumer 运行日志: `kubectl logs -f -n dubbo-app ``kubectl get pod -n dubbo-app -l app=consumer -o jsonpath='{ .items[*].metadata.name }'`` -c consumer`{{execute}}
+查看 Consumer 运行日志:
+
+- `export CONSUMER_POD=$(kubectl get pod -n dubbo-app -l app=consumer -o jsonpath='{ .items[*].metadata.name }')`{{execute}}
+- `kubectl logs -f -n dubbo-app $CONSUMER_POD -c consumer`{{execute}}
 
 如果不出意外，你应该会得到结果，例如:
 
