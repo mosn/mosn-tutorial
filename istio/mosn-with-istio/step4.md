@@ -32,11 +32,11 @@ Confirm the successful creation of the gateway.
 
 Set ingress IP.
 
-`export INGRESS_HOST=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.status.loadBalancer.ingress[0].ip}')`{{execute}
+`export INGRESS_HOST=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.status.loadBalancer.ingress[0].ip}')`{{execute}}
 
 Set ingress port.
 
-`export INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[? (@.name=="http2")].port}')`{{execute}
+`export INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[? (@.name=="http2")].port}')`{{execute}}
 
 Set `GATEWAY_URL`.
 

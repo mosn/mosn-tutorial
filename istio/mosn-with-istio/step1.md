@@ -10,7 +10,7 @@ If the cluster is not started, execute: `launch.sh`{{execute}}
 
 Check `katacoda-cloud-provider`, this will affect whether the environment can provide external load balancing properly:
 
-`kubectl get deploy -n kube-system katacoda-cloud-provider`{{execute}
+`kubectl get deploy -n kube-system katacoda-cloud-provider`{{execute}}
 
 Some other commands can be executed using the `kubectl` command to check the integrity of Kubernetes clusters.
 
