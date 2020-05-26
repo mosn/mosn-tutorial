@@ -6,6 +6,11 @@
       "course_id": "mosn-with-istio",
       "title": "MOSN with Istio",
       "description": "Run the Bookinfo sample using MOSN as data plane with Istio."
+    },
+    {
+      "course_id": "istio-mosn-adapt-dubbo",
+      "title": "Istio with MOSN adapt dubbo",
+      "description": "Dubbo demo run with MOSN in Istio env."
     }
   ]
 }
