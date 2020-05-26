@@ -18,13 +18,13 @@ spec:
     spec:
       containers:
       - name: consumer
-        image: registry.cn-hangzhou.aliyuncs.com/sink-demo/dubbo-consumer:v0.0.1
+        image: champly/dubbo-consumer:v0.0.1
         imagePullPolicy: Always
         env:
         - name: "PROVIDER_LISTENER_PORT"
           value: "20881"
       - name: istio-proxy
-        image: registry.cn-hangzhou.aliyuncs.com/sink-demo/mosn:v0.0.2
+        image: champly/mosn:v0.0.2
         imagePullPolicy: Always
         args:
         - start
