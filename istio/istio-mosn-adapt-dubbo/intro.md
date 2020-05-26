@@ -12,4 +12,4 @@ If you want to contribute or learn more about this tutorial, please join the [MO
 
 数据面流程图:
 
-![image](./install/img/mosn-dubbo.png)
+![image](https://raw.githubusercontent.com/mosn/mosn-tutorial/master/istio/istio-mosn-adapt-dubbo/install/img/mosn-dubbo.png)
