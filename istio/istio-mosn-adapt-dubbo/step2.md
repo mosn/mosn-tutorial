@@ -18,7 +18,7 @@ provider-7f5c44bcfc-k9kwk   2/2     Running   0          2m37s   10.32.0.3    no
 provider-7f5c44bcfc-l82lx   2/2     Running   0          2m37s   10.32.0.12   node01   <none>           <none>
 ```
 
-Remember this Pod IP:  10.32.0.11, 10.32.0.3, 10.32.0.12
+Remember this Pod IP:  10.32.0.11, 10.32.0.3, 10.32.0.12 (*according to the actual operation*)
 
 ---
 
@@ -40,4 +40,4 @@ provider-7f5c44bcfc-k9kwk   2/2     Running   0          2m37s   10.32.0.3    no
 provider-7f5c44bcfc-l82lx   2/2     Running   0          2m37s   10.32.0.12   node01   <none>           <none>
 ```
 
-记住这些 Pod IP:  10.32.0.11, 10.32.0.3, 10.32.0.12
+记住这些 Pod IP:  10.32.0.11, 10.32.0.3, 10.32.0.12 (*请根据实际运行情况而定*)

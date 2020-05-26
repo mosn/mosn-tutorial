@@ -10,7 +10,7 @@ Rewrite provider really ip: `kubectl edit serviceentry dubbo-app-se`{{execute}}
 
 Check ServiceEntry content: `kubectl get serviceentry dubbo-app-se -o jsonpath='{ .spec.endpoints }'`{{execute}}
 
-Must equal provider's Pod IP
+Must equal provider's Pod IP (*according to the actual operation*)
 
 such as:
 
@@ -31,7 +31,7 @@ master $ kubectl get serviceentry dubbo-app-se -o jsonpath='{ .spec.endpoints }'
 
 检查 ServiceEntry 内容: `kubectl get serviceentry dubbo-app-se -o jsonpath='{ .spec.endpoints }'`{{execute}}
 
-必须等于 provider 的 Pod IP
+必须等于 provider 的 Pod IP (*请根据实际运行情况而定*)
 
 例如:
 
