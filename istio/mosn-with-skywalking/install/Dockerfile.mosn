@@ -8,4 +8,6 @@ ADD https://github.com/mosn/mosn/releases/download/${MOSN_VERSION}/mosn .
 
 ADD https://raw.githubusercontent.com/mosn/mosn/${MOSN_VERSION}/examples/codes/trace/skywalking/http/config.json .
 
+RUN chmod +x mosn
+
 ENTRYPOINT ["/mosn/mosn", "start", "-c", "config.json"]
