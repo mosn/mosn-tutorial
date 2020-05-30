@@ -4,6 +4,9 @@ ARG MOSN_TAGS=v0.12.0
 ARG MOSN_CODE=${MOSN_TAGS}.tar.gz
 ARG MOSN_CODE_URL=https://github.com/mosn/mosn/archive/${MOSN_CODE}
 
+ENV CGO_ENABLED=0
+ENV GO111MODULE=on
+
 WORKDIR /mosn
 
 ADD ${MOSN_CODE_URL} .
