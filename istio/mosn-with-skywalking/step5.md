@@ -1,4 +1,4 @@
-本教程将通过 SkyWalking UI 查看 trace 的结果
+本教程将通过 SkyWalking UI 查看追踪的结果
 
 ## 访问 SkyWalking UI
 
