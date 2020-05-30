@@ -1,8 +1,8 @@
 FROM golang:1.12
 
-ARG MOSN_TAGS=0.12.0
+ARG MOSN_TAGS=v0.12.0
 ARG MOSN_CODE=${MOSN_TAGS}.tar.gz
-ARG MOSN_CODE_URL=https://github.com/mosn/mosn/archive/v${MOSN_CODE}
+ARG MOSN_CODE_URL=https://github.com/mosn/mosn/archive/${MOSN_CODE}
 
 WORKDIR /mosn
 
@@ -11,4 +11,9 @@ RUN tar -xf ${MOSN_CODE} --strip 1 && rm ${MOSN_CODE}
 
 WORKDIR /mosn/examples/codes/trace/skywalking/http
 
-ENTRYPOINT ["go", "run", "client.go"]
+RUN go build -o http-client client.go
+
+FROM alpine:3.10
+COPY --from=builder /mosn/examples/codes/trace/skywalking/http/http-client .
+
+ENTRYPOINT ["/http-client"]
