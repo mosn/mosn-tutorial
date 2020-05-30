@@ -1,0 +1,14 @@
+FROM golang:1.12
+
+ARG MOSN_TAGS=0.12.0
+ARG MOSN_CODE=${MOSN_TAGS}.tar.gz
+ARG MOSN_CODE_URL=https://github.com/mosn/mosn/archive/v${MOSN_CODE}
+
+WORKDIR /mosn
+
+ADD ${MOSN_CODE_URL} .
+RUN tar -xf ${MOSN_CODE} --strip 1 && rm ${MOSN_CODE}
+
+WORKDIR /mosn/examples/codes/trace/skywalking/http
+
+ENTRYPOINT ["go", "run", "server.go"]

@@ -11,6 +11,11 @@
       "course_id": "istio-mosn-adapt-dubbo",
       "title": "Istio with MOSN adapt dubbo",
       "description": "Dubbo demo run with MOSN in Istio env."
+    },
+    {
+      "course_id": "mosn-with-skywalking",
+      "title": "MOSN with SkyWalking",
+      "description": "Use SkyWalking as a trace implementation."
     }
   ]
 }
