@@ -1,7 +1,7 @@
 version: '3.3'
 services:
   skywalking-oap:
-    image: apache/skywalking-oap-server:7.0
+    image: apache/skywalking-oap-server:7.0.0-es7
     container_name: skywalking-oap
     restart: always
     ports:
@@ -10,7 +10,7 @@ services:
     environment:
       SW_STORAGE: h2
   skywalking-ui:
-    image: apache/skywalking-ui:7.0
+    image: apache/skywalking-ui:7.0.0
     container_name: skywalking-ui
     depends_on:
       - skywalking-oap
@@ -18,6 +18,6 @@ services:
       - skywalking-oap
     restart: always
     ports:
-      - 8080:8080
+      - 80:8080
     environment:
       SW_OAP_ADDRESS: skywalking-oap:12800
