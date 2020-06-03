@@ -2,7 +2,7 @@
   "title": "MOSN with SkyWalking",
   "description": "Use SkyWalking as a trace implementation",
   "difficulty": "Intermediate",
-  "time": "15 min",
+  "time": "10 min",
   "details": {
     "steps": [
       {
