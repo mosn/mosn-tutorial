@@ -23,11 +23,11 @@ Exit the container to continue. In the next step, we'll increase the load and wa
 
 在Istio中，可以根据需求更新和修改流量。
 
-如在“连接和控制Istio”方案中所讨论的，VirtualService将流量定向到组件应处理请求的版本。DesticationRule配置网络和流量的负载平衡。使用DesticationRule，可以实现断路器来限制对服务的并发请求数。
+如在“连接和控制Istio”方案中所讨论的，VirtualService将流量定向到组件应处理请求的版本。DesticationRule配置网络和流量的负载均衡。使用DesticationRule，可以实现断路器来限制对服务的并发请求数。
 
 下面的DesticationRule有两个可以触发的断路器。第一个是连接池，它将最大TCP连接限制为1，每个连接最多1个HTTP请求。
 
-第二个是异常检测(OutlierDetection)，如果失败的节点连续一段时间返回了500条错误消息，则会自动删除这些节点。
+第二个是异常检测（OutlierDetection），如果失败的节点连续一段时间返回了 500 错误消息，则会自动删除这些节点。
 
 `kubectl apply -f httpbinRule.yaml`{{execute}}
 `cat httpbinRule.yaml`{{execute}}
