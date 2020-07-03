@@ -36,13 +36,13 @@ When the above status is Running, you can verify that the httpbin application is
 
 在Istio体系结构中，Envoy代理用于管理服务之间的流量。结果，Envoy内的所有可用功能都通过Istio公开，例如Envoy的Circuit Breaker。类型包括：
 
-群集最大连接数(Cluster maximum connections)：Envoy将建立到上游群集中所有主机的最大连接数。
+集群最大连接数（Cluster maximum connections）：Envoy将建立到上游集群中所有主机的最大连接数。
 
-群集最大未决请求数(Cluster maximum pending requests)：等待就绪连接池连接时将排队的最大请求数。
+集群最大未决请求数（Cluster maximum pending requests）：等待就绪连接池连接时将排队的最大请求数。
 
-群集最大请求数(Cluster maximum requests)：在任何给定时间，群集中所有主机可以处理的最大请求数。
+集群最大请求数（Cluster maximum requests）：在任何给定时间，集群中所有主机可以处理的最大请求数。
 
-群集最大活动重试次数(Cluster maximum active retries)：在任何给定时间，群集中所有主机可以执行的最大重试次数。
+集群最大活动重试次数（Cluster maximum active retries）：在任何给定时间，集群中所有主机可以执行的最大重试次数。
 
 在此示例中，我们将部署HTTPBin服务。该服务回显HTTP请求作为响应，使我们能够轻松识别响应和错误。
 
