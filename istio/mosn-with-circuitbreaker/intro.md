@@ -19,7 +19,7 @@ If you want to contribute or learn more about this tutorial, please join the [MO
 
 熔断是分布式系统的关键组成部分。 熔断使应用程序可以配置故障阈值，以确保安全最大化，从而允许组件快速故障并尽快施加反压。 应用正确的断路阈值有助于节省资源，否则这些资源将浪费在等待请求（超时）或不必要地重试请求上。 MOSN中实现熔断的主要优点之一是断路限制适用于网络级别。
 
-如果那你想要进一步了解或贡献本教程，请加入 [MOSN Istio WG](https://github.com/mosn/community/blob/master/wg-istio.md)。
+如果您想要进一步了解或贡献本教程，请加入 [MOSN Istio WG](https://github.com/mosn/community/blob/master/wg-istio.md)。
 
 - GitHub：https://github.com/mosn/mosn
 - 官网：https://mosn.io/zh
