@@ -48,7 +48,7 @@ When the above status is Running, you can verify that the httpbin application is
 
 使用下面命令来部署httpbin `kubectl apply -f <(istioctl kube-inject -f samples/httpbin/httpbin.yaml>httpbin.yaml && sed -i "s/\/usr\/local\/bin\/envoy/\/usr\/local\/bin\/mosn/g" ./httpbin.yaml`{{execute}}
 
-验证所有服务和Pod是否正常运行，并使用以下命令检查它们的状态。验证所有服务和Pod是否正常运行，并使用以下命令检查它们的状态。验证所有服务和Pod是否正常运行，并使用以下命令检查它们的状态。
+验证所有服务和Pod是否正常运行，并使用以下命令检查它们的状态。
 
 `kubectl get services`{{execute}}
 
