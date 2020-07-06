@@ -21,7 +21,7 @@ It’s interesting to see that almost all requests made it through! The istio-pr
 
 If you increase the concurrent connections, the number of errors will also increase.
 
-kubectl exec -it $FORTIO_POD  -c fortio /usr/local/bin/fortio -- load -c 3 -qps 0 -n 20 -loglevel Warning http://httpbin:8000/get`{{execute}}
+`kubectl exec -it $FORTIO_POD  -c fortio /usr/local/bin/fortio -- load -c 3 -qps 0 -n 20 -loglevel Warning http://httpbin:8000/get`{{execute}}
 
 Remember, the circuit breaker is defined to protect the underlying system and fail gracefully.
 
@@ -43,20 +43,20 @@ The metric upstream_rq_pending_overflow is from Envoy, more details can be found
 
 `kubectl apply -f fortio-deploy.yaml` {{execute}}
 
-`FORTIO_POD = $（kubectl get pod | grep fortio | awk'{print $ 1}'））{{execute}}
+`FORTIO_POD = $（kubectl get pod | grep fortio | awk'{print $ 1}'））`{{execute}}
 
-登录到客户端pod并使用fortio工具调用httpbin。传递-curl表示您只想打一个电话：
+登录到客户端pod并使用fortio工具调用httpbin。传递-curl表示您只想发起一次调用：
 `kubectl exec -it "$ FORTIO_POD" -c fortio -- /usr/bin/fortio load -curl http//httpbin8000/get`{{execute}}
 
 您可以看到请求成功！现在，该打破一些东西了。
 
-在DestinationRule设置中，指定了maxConnections：1和http1MaxPendingRequests：1.这些规则表明，如果您超过一个以上的连接并发请求，则在istio-proxy打开电路进行进一步的请求和连接时，应该会看到一些故障。
+在DestinationRule设置中，指定了maxConnections:1 和 http1MaxPendingRequests:1。这些规则表明，如果您超过一个以上的连接并发请求，则在istio-proxy打开回路进行进一步的请求和连接时，应该会看到一些故障。
 
 然后使用两个并发连接（-c 2）调用该服务并发送20个请求（-n 20）：命令生成两个并发连接（-c 2）并发送20个请求（-n 20）。您应该开始看到一些请求返回为503，这意味着断路器已跳闸。
 
 `kubectl exec -it $ FORTIO_POD -c fortio /usr/local/bin/fortio -- load -c 2 -qps 0 -n 20 -loglevel Warning http://httpbin:8000/get`{{execute}}
 
-如果你发现几乎所有请求都通过了的话，那说明istio-proxy确实有一些余地,而不是错误。
+如果你发现几乎所有请求都通过了的话，那说明istio-proxy确实有一些余地，而不是错误。
 
 如果增加并发连接，错误数量也会增加。
 
@@ -70,6 +70,6 @@ The metric upstream_rq_pending_overflow is from Envoy, more details can be found
 
 `kubectl exec -it $ FORTIO_POD -c istio-proxy --sh -c 'curl localhost:15000/stats'| grep httpbin | grep pending`{{execute}}
 
-您可以看到一个上游_rq_pending_overflow值，该值指示到目前为止已标记为断路的呼叫数。
+您可以看到一个上游_rq_pending_overflow值，该值指示到目前为止已标记为断路的调用数。
 
 度量指标 upstream_rq_pending_overflow来自Envoy，更多详细信息可以在以下文档中找到：https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/circuit_breaking
