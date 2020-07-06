@@ -16,6 +16,11 @@
       "course_id": "mosn-with-skywalking",
       "title": "MOSN with SkyWalking",
       "description": "Use SkyWalking as a trace implementation."
+    },
+    {
+      "course_id": "mosn-with-circuitbreaker",
+      "title": "MOSN with Istio Circuit Breaker",
+      "description": "Running Circuit Breaker using MOSN with Istio."
     }
   ]
 }

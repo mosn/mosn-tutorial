@@ -1,12 +1,12 @@
 {
-  "title": "MOSN with Istio circuitbreaker",
-  "description": "Running Circuitbreaker by using MOSN with istio",
+  "title": "MOSN with Istio Circuit Breaker",
+  "description": "Running Circuit Breaker using MOSN with Istio",
   "difficulty": "Intermediate",
   "time": "30",
   "details": {
     "steps": [
       {
-        "title": "Step 1: Install istio with MOSN",
+        "title": "Step 1: Install Istio with MOSN",
         "text": "step1.md"
       },
       {
