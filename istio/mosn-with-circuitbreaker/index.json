@@ -1,5 +1,5 @@
 {
-  "title": "Mosn with Istio circuitbreaker",
+  "title": "MOSN with Istio circuitbreaker",
   "description": "Running Circuitbreaker by using MOSN with istio",
   "difficulty": "Intermediate",
   "time": "30",
