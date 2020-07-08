@@ -8,7 +8,7 @@
 运行结果：
 
 ```shell
-$ docker run -d --name http-client --rm --network host mosnio/mosn-tutorial:mosn-with-skywalking-http-client
+docker run -d --name http-client --rm --network host mosnio/mosn-tutorial:mosn-with-skywalking-http-client
 Unable to find image 'mosnio/mosn-tutorial:mosn-with-skywalking-http-client' locally
 mosn-with-skywalking-http-client: Pulling from mosnio/mosn-tutorial
 f95323fb7990: Pull complete
@@ -16,7 +16,7 @@ Digest: sha256:5a62e982c67b0b3f049900ab10085046c5c3dacaf34f8f93b3a806c10d36b25e
 Status: Downloaded newer image for mosnio/mosn-tutorial:mosn-with-skywalking-http-client
 9af61f1406a1164ca44820d4e389cdeacea1d292905bedb97b8b39ecf9471cff
 
-$ docker ps
+docker ps
 CONTAINER ID        IMAGE                                                   COMMAND                  CREATED STATUS              PORTS                                                          NAMES
 d80bece650be        mosnio/mosn-tutorial:mosn-with-skywalking-http-client   "/http-client"           12 seconds ago Up 9 seconds                                                                       http-client
 9b6cfe6aa43c        mosnio/mosn-tutorial:mosn-with-skywalking-http-mosn     "/mosn/mosn start -c…"   About a minute ago Up 59 seconds                                                                      mosn
