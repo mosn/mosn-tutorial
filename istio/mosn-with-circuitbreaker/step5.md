@@ -39,14 +39,14 @@ The metric upstream_rq_pending_overflow is from Envoy, more details can be found
 
 创建一个客户端以将流量发送到httpbin服务。该客户端是一个简单的负载测试客户端，称为fortio。 Fortio使您可以控制连接数，并发性和传出HTTP调用的延迟。您将使用此客户端来“跳闸”在DestinationRule中设置的断路器策略。
 
-启动Fortio, 使用`istioctl kube-inject -f samples/httpbin/sample-client/fortio-deploy.yaml> fortio-deploy.yaml && sed -i "s/\/usr\/local\/bin\/envoy/\/usr\/local\/bin\/mosn/g" ./fortio-deploy.yaml` {{execute}}
+启动Fortio，使用`istioctl kube-inject -f samples/httpbin/sample-client/fortio-deploy.yaml> fortio-deploy.yaml && sed -i "s/\/usr\/local\/bin\/envoy/\/usr\/local\/bin\/mosn/g" ./fortio-deploy.yaml`{{execute}}
 
-`kubectl apply -f fortio-deploy.yaml` {{execute}}
+`kubectl apply -f fortio-deploy.yaml`{{execute}}
 
-`FORTIO_POD = $（kubectl get pod | grep fortio | awk'{print $ 1}'））`{{execute}}
+`FORTIO_POD = $(kubectl get pod | grep fortio | awk'{print $1})'`{{execute}}
 
 登录到客户端pod并使用fortio工具调用httpbin。传递-curl表示您只想发起一次调用：
-`kubectl exec -it "$ FORTIO_POD" -c fortio -- /usr/bin/fortio load -curl http//httpbin8000/get`{{execute}}
+`kubectl exec -it "$FORTIO_POD" -c fortio -- /usr/bin/fortio load -curl http//httpbin8000/get`{{execute}}
 
 您可以看到请求成功！现在，该打破一些东西了。
 
@@ -54,13 +54,13 @@ The metric upstream_rq_pending_overflow is from Envoy, more details can be found
 
 然后使用两个并发连接（-c 2）调用该服务并发送20个请求（-n 20）：命令生成两个并发连接（-c 2）并发送20个请求（-n 20）。您应该开始看到一些请求返回为503，这意味着断路器已跳闸。
 
-`kubectl exec -it $ FORTIO_POD -c fortio /usr/local/bin/fortio -- load -c 2 -qps 0 -n 20 -loglevel Warning http://httpbin:8000/get`{{execute}}
+`kubectl exec -it $FORTIO_POD -c fortio /usr/local/bin/fortio --load -c 2 -qps 0 -n 20 -loglevel Warning http://httpbin:8000/get`{{execute}}
 
 如果你发现几乎所有请求都通过了的话，那说明istio-proxy确实有一些余地，而不是错误。
 
 如果增加并发连接，错误数量也会增加。
 
-`kubectl exec -it $ FORTIO_POD -c fortio /usr/local/bin/fortio -- load -c 3 -qps 0 -n 20 -loglevel Warning http://httpbin:8000/get`{{execute}}
+`kubectl exec -it $FORTIO_POD -c fortio /usr/local/bin/fortio --load -c 3 -qps 0 -n 20 -loglevel Warning http://httpbin:8000/get`{{execute}}
 
 请记住，断路器的定义是为了保护基础系统正常运行。
 
@@ -68,8 +68,8 @@ The metric upstream_rq_pending_overflow is from Envoy, more details can be found
 
 例如，以下内容将突出显示HTTPBin服务的统计信息。
 
-`kubectl exec -it $ FORTIO_POD -c istio-proxy --sh -c 'curl localhost:15000/stats'| grep httpbin | grep pending`{{execute}}
+`kubectl exec -it $FORTIO_POD -c istio-proxy --sh -c 'curl localhost:15000/stats'| grep httpbin | grep pending`{{execute}}
 
-您可以看到一个上游_rq_pending_overflow值，该值指示到目前为止已标记为断路的调用数。
+您可以看到一个  upstream_rq_pending_overflow 值，该值指示到目前为止已标记为断路的调用数。
 
-度量指标 upstream_rq_pending_overflow来自Envoy，更多详细信息可以在以下文档中找到：https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/circuit_breaking
+度量指标 upstream_rq_pending_overflow 来自Envoy，更多详细信息可以在以下文档中找到：https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/circuit_breaking

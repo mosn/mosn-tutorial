@@ -22,7 +22,7 @@ The response should be a 200 OK message indicating everything is working as expe
 
 要访问HTTPBin服务，需要一个客户端。sleep示例应用程序不执行任何工作负载，而是允许用户以交互方式附加和执行bash命令。该容器将使我们能够测试和调试系统。
 
-使用“istioctl kube-inject -f samples/sleep/sleep.yaml> sleep.yaml && sed -i "s/\/usr\/local\/bin\/envoy/\/usr\/local\/bin\/mosn/g" ./sleep.yaml`{{execute}}
+使用`istioctl kube-inject -f samples/sleep/sleep.yaml> sleep.yaml && sed -i "s/\/usr\/local\/bin\/envoy/\/usr\/local\/bin\/mosn/g" ./sleep.yaml`{{execute}}
 
 `kubectl apply -f sleep.yaml`{{execute}}
 
