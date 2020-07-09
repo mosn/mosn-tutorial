@@ -9,8 +9,7 @@
 运行结果：
 
 ```shell
-
-$ docker-compose -f skywalking-docker-compose.yaml up -d
+docker-compose -f skywalking-docker-compose.yaml up -d
 Pulling skywalking-oap (apache/skywalking-oap-server:7.0.0-es7)...
 7.0.0-es7: Pulling from apache/skywalking-oap-server
 5f80e24e94e5: Pull complete
@@ -24,10 +23,9 @@ Status: Downloaded newer image for apache/skywalking-ui:7.0.0
 Creating skywalking-oap ... done
 Creating skywalking-ui  ... done
 
-$ docker ps
+docker ps
 
 CONTAINER ID        IMAGE                                 COMMAND                  CREATED             STATUS              PORTS   NAMES
 fd0545af0ff1        apache/skywalking-ui:latest           "bash docker-entrypo…"   2 minutes ago       Up 2 minutes        0.0.0.0:80->8080/tcp   skywalking-ui
 90e63b1aae93        apache/skywalking-oap-server:latest   "bash docker-entrypo…"   2 minutes ago       Up 2 minutes        0.0.0.0:11800->11800/tcp, 1234/tcp, 0.0.0.0:12800->12800/tcp   skywalking-oap
-
 ```
