@@ -5,7 +5,7 @@ Originally, Sidecar auto-injection could be implemented by kubectl label namespa
 ## Deployment applications
 
 Sidecar injection with `kube-inject`.
-`istioctl kube-inject -f samples/bookinfo/platform/kube/bookinfo.yaml > bookinfo.yaml && sed -i "s/\/usr\/local\/bin/envoy/\/usr\/local\/bin\/mosn/g" . /bookinfo.yaml`{{execute}}
+`istioctl kube-inject -f samples/bookinfo/platform/kube/bookinfo.yaml > bookinfo.yaml && sed -i "s/\/usr\/local\/bin\/envoy/\/usr\/local\/bin\/mosn/g" ./bookinfo.yaml`{{execute}}
 
 Deploying the Bookinfo application after Sidecar injection.
 `kubectl apply -f bookinfo.yaml`{{execute}}
