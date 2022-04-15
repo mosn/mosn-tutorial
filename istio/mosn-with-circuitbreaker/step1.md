@@ -2,13 +2,13 @@
 
 This tutorial will automatically help you start a Kubernetes cluster with 2 nodes (one master node and one worker node), Kubernetes version is v1.14.0.
 
-Download istio install file: `curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.5.2 sh -`{{execute}}
+Download istio install file: `curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.10.6 sh -`{{execute}}
 
-Add directory to your environment path variable with: `export PATH="$PATH:/root/istio-1.5.2/bin"`{{execute}}
+Add directory to your environment path variable with: `export PATH="$PATH:/root/istio-1.10.6/bin"`{{execute}}
 
 Install operator for install cluster: `istioctl operator init`{{execute}}
 
-Install cluster with operator: `istioctl manifest apply --set profile=demo --set .values.global.proxy.image="mosnio/proxyv2:1.5.2-mosn" --set meshConfig.defaultConfig.binaryPath="/usr/local/bin/mosn`{{execute}}
+Install cluster with operator: `istioctl manifest apply --set profile=demo --set .values.global.proxy.image="mosnio/proxyv2:v1.0.0-1.10.6" --set meshConfig.defaultConfig.binaryPath="/usr/local/bin/mosn`{{execute}}
 
 Wait a minute later. Check all component start succ for Status `Running`: `kubectl get pods -n istio-system -o wide`{{execute}}
 
@@ -18,12 +18,12 @@ Wait a minute later. Check all component start succ for Status `Running`: `kubec
 
 ## 安装 Istio 集群
 
-下载 Istio 安装文件: `curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.5.2 sh -`{{execute}}
+下载 Istio 安装文件: `curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.10.6 sh -`{{execute}}
 
-添加文件夹到环境变量: `export PATH="$PATH:/root/istio-1.5.2/bin"`{{execute}}
+添加文件夹到环境变量: `export PATH="$PATH:/root/istio-1.10.6/bin"`{{execute}}
 
 安装 Operator 用来安装集群: `istioctl operator init`{{execute}}
 
-使用 Operator 安装集群: `istioctl manifest apply --set profile=demo --set .values.global.proxy.image="mosnio/proxyv2:1.5.2-mosn" --set meshConfig.defaultConfig.binaryPath="/usr/local/bin/mosn`{{execute}}
+使用 Operator 安装集群: `istioctl manifest apply --set profile=demo --set .values.global.proxy.image="mosnio/proxyv2:v1.0.0-1.10.6" --set meshConfig.defaultConfig.binaryPath="/usr/local/bin/mosn`{{execute}}
 
 等待几分钟，检查所有的组件启动成功，状态都是 `Running`: `kubectl get pods -n istio-system -o wide`{{execute}}

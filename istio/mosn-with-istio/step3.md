@@ -6,7 +6,7 @@ Use the `default` profile to quickly install istio.
 
 Specify `MOSN` as the data surface in the `istioctl` command via the parameters of the istioctl command.
 
-`istioctl manifest apply --set .values.global.proxy.image="mosnio/proxyv2:1.5.2-mosn" --set meshConfig.defaultConfig.binaryPath="/usr/local/bin/mosn"`{{execute}}
+`istioctl manifest apply --set .values.global.proxy.image="mosnio/proxyv2:v1.0.0-1.10.6" --set meshConfig.defaultConfig.binaryPath="/usr/local/bin/mosn"`{{execute}}
 
 Check that the Kubernetes service is deployed properly and that all services other than the `jaeger-agent` service have the correct `CLUSTER-IP`.
 
@@ -15,8 +15,6 @@ Check that the Kubernetes service is deployed properly and that all services oth
 `kubectl get svc -n istio-system`{{execute}}
 
 Check that the pod in related has been successfully deployed and that `STATUS` is `Running`.
-
-**Note**: If it is observed that the `STATUS` of the pod `prometheus-xxx` is `InvalidImageName,` it can be ignored for now, due to a bug in Istio that currently fixes the [PR](https://github.com/istio/istio/pull/22464) that has merged into the trunk.
 
 `kubectl get pods -n istio-system`{{execute}}
 
@@ -34,7 +32,7 @@ Once the deployment is successful, you can go to the Bookinfo example.
 
 通过 `istioctl` 命令的参数指定 `MOSN` 作为 istio 中的数据面：
 
-`istioctl manifest apply  --set .values.global.proxy.image="mosnio/proxyv2:1.5.2-mosn"   --set meshConfig.defaultConfig.binaryPath="/usr/local/bin/mosn" `{{execute}}
+`istioctl manifest apply  --set .values.global.proxy.image="mosnio/proxyv2:v1.0.0-1.10.6"   --set meshConfig.defaultConfig.binaryPath="/usr/local/bin/mosn" `{{execute}}
 
 检查 Kubernetes 服务是否部署正常，检查除 `jaeger-agent` 服务外的其他服务，是否均有正确的 `CLUSTER-IP`。
 
@@ -43,8 +41,6 @@ Once the deployment is successful, you can go to the Bookinfo example.
 `kubectl get svc -n istio-system`{{execute}}
 
 检查相关 pod 是否部署成功，并且 `STATUS` 为 `Running`：
-
-**注意**：如果观察到 `prometheus-xxx` 这个 pod 的 `STATUS` 为 `InvalidImageName` 则可以先忽略，这是由于 Istio 中的一个 Bug 导致的，目前修复 [PR](https://github.com/istio/istio/pull/22464) 已经合入主干。
 
 `kubectl get pods -n istio-system`{{execute}}
 
