@@ -8,7 +8,7 @@ A zip file that matches your operating system can be downloaded on the istio rel
 
 Use the following command to download istio:.
 
-`export ISTIO_VERSION=1.10.6 && curl -L https://raw.githubusercontent.com/istio/istio/release-1.10/release/downloadIstioCandidate.sh | sh -`{{execute}}
+` curl  -L https://istio.io/downloadIstio | ISTIO_VERSION=1.10.6  TARGET_ARCH=x86_64 sh -`{{execute}}
 
 The downloaded istio package is named `istio-1.10.6` and contains.
 
@@ -37,7 +37,8 @@ See more information about istioctl using the following command.
 
 使用如下命令来下载 istio：
 
-`export ISTIO_VERSION=1.10.6 && curl -L https://raw.githubusercontent.com/istio/istio/release-1.10/release/downloadIstioCandidate.sh | sh -`{{execute}}
+
+` curl  -L https://istio.io/downloadIstio | ISTIO_VERSION=1.10.6  TARGET_ARCH=x86_64 sh -`{{execute}}
 
 下载的 istio 包名为 `istio-1.10.6`，包含：
 - `install/kubernetes`：包含 Kubernetes 相关的 YAML 安装文件。
