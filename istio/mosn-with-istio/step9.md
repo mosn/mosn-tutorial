@@ -4,7 +4,7 @@
 
 Execute the following command to delete the Istio-related CRD and resources such as pods.
 
-`istioctl manifest generate --set .values.global.proxy.image="mosnio/proxyv2:1.5.2-mosn" --set meshConfig.defaultConfig.binaryPath="/usr/local/bin/mosn" | kubectl delete -f -`{{execute}}
+`istioctl manifest generate | kubectl delete -f -`{{execute}}
 
 Confirm that Istio was successfully uninstalled.
 
@@ -23,7 +23,7 @@ At this point, we have completed the cleanup of Bookinfo and Istio.
 执行如下命令，删除 Istio 相关 CRD 以及 pod 等资源：
 
 
-`istioctl manifest generate  --set .values.global.proxy.image="mosnio/proxyv2:1.5.2-mosn" --set meshConfig.defaultConfig.binaryPath="/usr/local/bin/mosn" | kubectl delete -f -`{{execute}}
+`istioctl manifest generate | kubectl delete -f -`{{execute}}
 
 
 确认 Istio 是否成功卸载：

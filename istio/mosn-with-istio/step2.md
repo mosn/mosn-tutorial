@@ -1,6 +1,6 @@
 本教程提供中文版说明，请翻至本页底部。
 
-Starting with istio v1.5.x, the way of using [helm installation](https://istio.io/docs/setup/install/helm/) has been deprecated and requires [istioctl installation](https://istio.io/docs/setup/install/istioctl/) instead.
+[istioctl installation](https://istio.io/docs/setup/install/istioctl/) instead.
 
 ## Download istio
 
@@ -8,9 +8,9 @@ A zip file that matches your operating system can be downloaded on the istio rel
 
 Use the following command to download istio:.
 
-`export ISTIO_VERSION=1.5.2 && curl -L https://raw.githubusercontent.com/istio/istio/release-1.5/release/downloadIstioCandidate.sh | sh -`{{execute}}
+`export ISTIO_VERSION=1.10.6 && curl -L https://raw.githubusercontent.com/istio/istio/release-1.10/release/downloadIstioCandidate.sh | sh -`{{execute}}
 
-The downloaded istio package is named `istio-1.5.2` and contains.
+The downloaded istio package is named `istio-1.10.6` and contains.
 
 - `install/kubernetes`: Contains the YAML installation file associated with Kubernetes.
 - `examples/`: Contains sample applications.
@@ -29,17 +29,17 @@ See more information about istioctl using the following command.
 
 ---
 
-从 istio v1.5.x 版本开始，官方已经废弃了[使用 helm 安装](https://istio.io/zh/docs/setup/install/helm/)的方式，需改用 [istioctl 安装](https://istio.io/zh/docs/setup/install/istioctl/)。
+[istioctl 安装](https://istio.io/zh/docs/setup/install/istioctl/)。
 
 ## 下载 istio
 
-可在 [istio release](https://github.com/istio/istio/releases/tag/1.5.2) 页面下载与您操作系统匹配的压缩文件，该文件中包含：安装文件、示例和 istioctl 命令行工具。
+可在 [istio release](https://github.com/istio/istio/releases/tag/1.10.6) 页面下载与您操作系统匹配的压缩文件，该文件中包含：安装文件、示例和 istioctl 命令行工具。
 
 使用如下命令来下载 istio：
 
-`export ISTIO_VERSION=1.5.2 && curl -L https://raw.githubusercontent.com/istio/istio/release-1.5/release/downloadIstioCandidate.sh | sh -`{{execute}}
+`export ISTIO_VERSION=1.10.6 && curl -L https://raw.githubusercontent.com/istio/istio/release-1.10/release/downloadIstioCandidate.sh | sh -`{{execute}}
 
-下载的 istio 包名为 `istio-1.5.2`，包含：
+下载的 istio 包名为 `istio-1.10.6`，包含：
 - `install/kubernetes`：包含 Kubernetes 相关的 YAML 安装文件。
 - `examples/`：包含示例应用程序。
 - `bin/`：包含 istioctl 的客户端文件。

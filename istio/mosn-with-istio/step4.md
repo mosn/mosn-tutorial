@@ -1,6 +1,6 @@
 本教程提供中文版说明，请翻至本页底部。
 
-Originally, Sidecar auto-injection could be implemented by kubectl label namespace default istio-injection=enabled, but since Istio-1.5.x version is not perfect enough for auto-hijacking in specified data surface scenarios, we implement Sidecar injection by istioctl kube-inject in the following way
+We implement Sidecar injection by `istioctl kube-inject` in the following way
 
 ## Deployment applications
 
@@ -58,7 +58,7 @@ The above operation has completed the meshization of the Bookinfo application, a
 
 ---
 
-原本可以通过 `kubectl label namespace default istio-injection=enabled` 命令实现 Sidecar 的自动注入，但是由于 Istio-1.5.x 版本在指定数据面的场景下自动劫持不够完善，所以下面我们通过 `istioctl kube-inject` 的方式实现 Sidecar 注入。
+我们通过 `istioctl kube-inject` 的方式实现 Sidecar 注入。
 
 ## 部署应用
 
