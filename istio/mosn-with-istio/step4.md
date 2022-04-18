@@ -46,7 +46,7 @@ Set `GATEWAY_URL`.
 
 The curl command can be used to confirm that the Bookinfo application can be accessed from outside the cluster:.
 
-`curl -s http://${GATEWAY_URL}/productpage | grep -o "<title>. *</title>"`{{execute}}
+`curl -s http://${GATEWAY_URL}/productpage | grep -o "<title>.*</title>"`{{execute}}
 
 It can be viewed by clicking on the following link.
 
