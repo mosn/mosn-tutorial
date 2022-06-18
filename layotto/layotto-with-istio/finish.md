@@ -1,6 +1,6 @@
 本教程提供中文版说明，请翻至本页底部。
 
-Congratulations! You have compled the Layotto with Istio course, if you are interested in MOSN or have any questions, please [leave a message](https://github.com/mosn/mosn/issues/new/choose).
+Congratulations! You have compled the Layotto with Istio course, if you are interested in Layotto or have any questions, please [leave a message](https://github.com/mosn/layotto/issues/new/choose).
 
 MOSN is a powerful cloud native proxy written in Golang. As a cloud-native network data plane, MOSN is designed to provide services with multi-protocol, modular, intelligent, and secure proxy capabilities. MOSN can be integrated with any Service Mesh that supports the xDS API. It can also be used for other purposes, such as independent Layer 4 or 7 load balancer, API gateway, and cloud-native ingress
 

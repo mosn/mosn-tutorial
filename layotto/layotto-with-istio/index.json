@@ -1,6 +1,6 @@
 {
   "title": "Layotto with Istio",
-  "description": "Run the Bookinfo sample using MOSN as data plane with Istio.",
+  "description": "Run the Bookinfo sample using Layotto as data plane with Istio.",
   "difficulty": "Intermediate",
   "time": "15 min",
   "details": {
