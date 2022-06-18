@@ -11,7 +11,7 @@ MOSN is a network proxy written in Golang. It can be used as a cloud-native netw
 - Github: https://github.com/mosn/mosn
 - Website: https://mosn.io
 
-## MOSN with Istio
+## Layotto with Istio
 
 [Istio](https://github.com/istio/istio) is the most popular Service Mesh, it use [Envoy](https://envoyproxy.io) as the default data plane, MOSN is aim to be the alternative cloud native data plane that support Enovy’s xDS.
 

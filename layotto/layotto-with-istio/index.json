@@ -1,5 +1,5 @@
 {
-  "title": "MOSN with Istio",
+  "title": "Layotto with Istio",
   "description": "Run the Bookinfo sample using MOSN as data plane with Istio.",
   "difficulty": "Intermediate",
   "time": "15 min",
