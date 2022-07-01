@@ -18,8 +18,7 @@
     },
     "assets": {
       "host01": [
-        {"file": "wait-background.sh", "target": "/ks", "chmod": "+x"},
-        {"file": "demo.yaml", "target": "/tmp", "chmod": "+x"}
+        {"file": "wait-background.sh", "target": "/ks", "chmod": "+x"}
       ]
     }
   },
