@@ -3,5 +3,4 @@ export ISTIO_VERSION=1.10.6
 curl -L https://istio.io/downloadIstio | TARGET_ARCH=x86_64 sh -
 echo "export PATH=/root/istio-${ISTIO_VERSION}/bin:\$PATH" >> .bashrc
 export PATH=/root/istio-${ISTIO_VERSION}/bin:$PATH
-mv /tmp/demo.yaml /root/istio-${ISTIO_VERSION}/manifests/profiles/
 istioctl install --set profile=demo -y --manifests=/root/istio-${ISTIO_VERSION}/manifests
