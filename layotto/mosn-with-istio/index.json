@@ -1,6 +1,6 @@
 {
-  "title": "Samples Bookinfo",
-  "description": "Run the Istio Bookinfo sample",
+  "title": "Mosn with Istio",
+  "description": "Run the Istio Bookinfo sample with mosn as the data plane",
   "details": {
       "steps": [
       {
