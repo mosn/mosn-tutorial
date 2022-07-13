@@ -1,6 +1,6 @@
 {
-  "title": "Samples Bookinfo",
-  "description": "Run the Istio Bookinfo sample",
+  "title": "Layotto with Istio",
+  "description": "Run the Istio Bookinfo sample with Layotto as the data plane",
   "details": {
       "steps": [
       {
