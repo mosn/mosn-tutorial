@@ -1,0 +1,28 @@
+{
+  "title": "Mosn with Istio",
+  "description": "Run the Istio Bookinfo sample with mosn as the data plane",
+  "details": {
+      "steps": [
+      {
+        "title": "Run the Istio Bookinfo sample",
+        "text": "step1/text.md"
+      }
+    ],
+    "finish": {
+      "text": "finish/finish.md"
+    },
+    "intro": {
+      "text": "init/init.md",
+      "background": "init/background.sh",
+      "foreground": "init/foreground.sh"
+    },
+    "assets": {
+      "host01": [
+        {"file": "wait-background.sh", "target": "/ks", "chmod": "+x"}
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-2nodes"
+  }
+}
