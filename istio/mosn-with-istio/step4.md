@@ -50,7 +50,7 @@ The curl command can be used to confirm that the Bookinfo application can be acc
 
 It can be viewed by clicking on the following link.
 
-https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/productpage
+{{TRAFFIC_HOST1_1234}}/productpage
 
 ## Next steps
 
@@ -108,7 +108,7 @@ The above operation has completed the meshization of the Bookinfo application, a
 
 可以点击下面的连接查看：
 
-https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/productpage
+{{TRAFFIC_HOST1_1234}}/productpage
 
 ## 后续步骤
 

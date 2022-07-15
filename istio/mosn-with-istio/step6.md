@@ -8,7 +8,7 @@ There is a login portal in the top right corner of the Bookinfo system, after lo
 
 Click on the following link, and you will find that those who are logged in with jason will be routed to v2, and those who are not logged in will be routed to the v1 review service.
 
-https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/productpage
+{{TRAFFIC_HOST1_1234}}/productpage
 
 ## Next steps
 
@@ -24,7 +24,7 @@ At this point, we have verified MOSN's routing functionality with version, heade
 
 点击下面的连接，此时发现使用 jason 这个用户登录的会路由到 v2 版本，其他未登录的都路由到 v1 版本的 review 服务：
 
-https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/productpage
+{{TRAFFIC_HOST1_1234}}/productpage
 
 ## 后续步骤
 
