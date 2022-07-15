@@ -20,7 +20,7 @@ Specify that the reviews service allocates 50% of the traffic according to v1 an
 
 Click on the link below and reviews will switch between the two versions.
 
-https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/productpage
+{{TRAFFIC_HOST1_1234}}/productpage
 
 ### Next steps
 
