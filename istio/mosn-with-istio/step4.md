@@ -24,6 +24,12 @@ When the above status is Running, you can verify that the Bookinfo application i
 
 `kubectl apply -f samples/bookinfo/networking/bookinfo-gateway.yaml`{{execute}}
 
+Confirm the successful creation of the gateway.
+
+`kubectl get gateway`{{execute}}
+
+Start a ingress gateway in background, use port 1234 to access port 80
+
 `kubectl port-forward -n istio-system --address 0.0.0.0 service/istio-ingressgateway 1234:80 >/dev/null 2>&1 &`{{execute}}
 
 ## Confirmation installation
@@ -61,6 +67,12 @@ The above operation has completed the meshization of the Bookinfo application, a
 ## 部署 ingress
 
 `kubectl apply -f samples/bookinfo/networking/bookinfo-gateway.yaml`{{execute}}
+
+确认网关创建成功
+
+`kubectl get gateway`{{execute}}
+
+在后台运行ingress 网关，通过1234端口转发到80端口
 
 `kubectl port-forward -n istio-system --address 0.0.0.0 service/istio-ingressgateway 1234:80 >/dev/null 2>&1 &`{{execute}}
 

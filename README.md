@@ -14,5 +14,5 @@ Here are the courses we have supported in the list.
 
 ## Contribute
 
-- [Create Interactive Killeroda Scenarios](https://killercoda.com/creators)
+- [Create Interactive Killercoda Scenarios](https://killercoda.com/creators)
 
