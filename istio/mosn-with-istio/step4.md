@@ -22,31 +22,9 @@ When the above status is Running, you can verify that the Bookinfo application i
 
 ## Deploy gateway
 
-Definition Ingress gateway.
-
-`kubectl apply -f samples/bookinfo/networking/bookinfo-gateway.yaml`{{execute}}
-
-Confirm the successful creation of the gateway.
-
-`kubectl get gateway`{{execute}}
-
-Set ingress IP.
-
-`export INGRESS_HOST=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.status.loadBalancer.ingress[0].ip}')`{{execute}}
-
-Set ingress port.
-
-`export INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="http2")].port}')`{{execute}}
-
-Set `GATEWAY_URL`.
-
-`export GATEWAY_URL=$INGRESS_HOST:$INGRESS_PORT`{{execute}}
+`kubectl port-forward -n istio-system --address 0.0.0.0 service/istio-ingressgateway 1234:80 >/dev/null 2>&1 &`{{execute}}
 
 ## Confirmation installation
-
-The curl command can be used to confirm that the Bookinfo application can be accessed from outside the cluster:.
-
-`curl -s http://${GATEWAY_URL}/productpage | grep -o "<title>.*</title>"`{{execute}}
 
 It can be viewed by clicking on the following link.
 
@@ -80,31 +58,9 @@ The above operation has completed the meshization of the Bookinfo application, a
 
 ## 部署 ingress
 
-定义 Ingress 网关：
-
-`kubectl apply -f samples/bookinfo/networking/bookinfo-gateway.yaml`{{execute}}
-
-确认网关成功创建：
-
-`kubectl get gateway`{{execute}}
-
-设置 ingress IP：
-
-`export INGRESS_HOST=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.status.loadBalancer.ingress[0].ip}')`{{execute}}
-
-设置 ingress 端口：
-
-`export INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="http2")].port}')`{{execute}}
-
-设置 `GATEWAY_URL`：
-
-`export GATEWAY_URL=$INGRESS_HOST:$INGRESS_PORT`{{execute}}
+`kubectl port-forward -n istio-system --address 0.0.0.0 service/istio-ingressgateway 1234:80 >/dev/null 2>&1 &`{{execute}}
 
 ## 确认访问
-
-可以用 curl 命令来确认是否能够从集群外部访问 `Bookinfo` 应用程序：
-
-`curl -s http://${GATEWAY_URL}/productpage | grep -o "<title>.*</title>"`{{execute}}
 
 可以点击下面的连接查看：
 
