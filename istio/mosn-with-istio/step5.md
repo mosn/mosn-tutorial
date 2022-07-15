@@ -12,7 +12,7 @@ Specify that the reviews service only access v1.
 
 Click on the following link, at which point the reviews will be fixed to the v1 page and no longer change.
 
-{{TRAFFIC_HOST1_1234}}/productpage
+[productpage]({{TRAFFIC_HOST1_1234}}/productpage)
 
 Specify that the reviews service allocates 50% of the traffic according to v1 and v3 versions each.
 
@@ -20,7 +20,7 @@ Specify that the reviews service allocates 50% of the traffic according to v1 an
 
 Click on the link below and reviews will switch between the two versions.
 
-{{TRAFFIC_HOST1_1234}}/productpage
+[productpage]({{TRAFFIC_HOST1_1234}}/productpage)
 
 ### Next steps
 
@@ -41,7 +41,7 @@ We've already experienced the routing capabilities of MOSN's version under Istio
 
 点击下面的连接，此时 reviews 会固定在版本一的页面不再变化：
 
-{{TRAFFIC_HOST1_1234}}/productpage
+[productpage]({{TRAFFIC_HOST1_1234}}/productpage)
 
 ### 指定 reviews 服务按照 v1 和 v3 版本各分配 50% 的流量：
 
@@ -49,7 +49,7 @@ We've already experienced the routing capabilities of MOSN's version under Istio
 
 点击下面的连接，此时 reviews 会在两个版本中切换：
 
-{{TRAFFIC_HOST1_1234}}/productpage
+[productpage]({{TRAFFIC_HOST1_1234}}/productpage)
 
 ## 后续步骤
 

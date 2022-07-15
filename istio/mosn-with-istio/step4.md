@@ -22,13 +22,15 @@ When the above status is Running, you can verify that the Bookinfo application i
 
 ## Deploy gateway
 
+`kubectl apply -f samples/bookinfo/networking/bookinfo-gateway.yaml`{{execute}}
+
 `kubectl port-forward -n istio-system --address 0.0.0.0 service/istio-ingressgateway 1234:80 >/dev/null 2>&1 &`{{execute}}
 
 ## Confirmation installation
 
 It can be viewed by clicking on the following link.
 
-{{TRAFFIC_HOST1_1234}}/productpage
+[productpage]({{TRAFFIC_HOST1_1234}}/productpage)
 
 ## Next steps
 
@@ -58,13 +60,15 @@ The above operation has completed the meshization of the Bookinfo application, a
 
 ## 部署 ingress
 
+`kubectl apply -f samples/bookinfo/networking/bookinfo-gateway.yaml`{{execute}}
+
 `kubectl port-forward -n istio-system --address 0.0.0.0 service/istio-ingressgateway 1234:80 >/dev/null 2>&1 &`{{execute}}
 
 ## 确认访问
 
 可以点击下面的连接查看：
 
-{{TRAFFIC_HOST1_1234}}/productpage
+[productpage]({{TRAFFIC_HOST1_1234}}/productpage)
 
 ## 后续步骤
 

@@ -7,6 +7,7 @@
 Run the following command to initialize the Bookinfo application version routing information.
 
 `kubectl apply -f samples/bookinfo/networking/virtual-service-all-v1.yaml`{{execute}}
+
 `kubectl apply -f samples/bookinfo/networking/virtual-service-reviews-test-v2.yaml`{{execute}}
 
 After the above configuration, the request link is as follows.
@@ -22,7 +23,7 @@ Executing the following command will inject a 7-second delay between the reviews
 
 Click on the following link.
 
-{{TRAFFIC_HOST1_1234}}/productpage
+[productpage]({{TRAFFIC_HOST1_1234}}/productpage)
 
 At this point it was discovered that when logging in to access using jason as a user, the Reviews section showed an error message.
 
@@ -35,7 +36,7 @@ Executing the following command will introduce an HTTP abort for user jason to a
 
 Click on the following link.
 
-{{TRAFFIC_HOST1_1234}}/productpage
+[productpage]({{TRAFFIC_HOST1_1234}}/productpage)
 
 When you log in with jason, the following error message is displayed:
 
@@ -50,6 +51,7 @@ Ratings service is currently unavailable
 运行以下命令来初始化 `Bookinfo` 应用程序版本路由信息：
 
 `kubectl apply -f samples/bookinfo/networking/virtual-service-all-v1.yaml`{{execute}}
+
 `kubectl apply -f samples/bookinfo/networking/virtual-service-reviews-test-v2.yaml`{{execute}}
 
 经过上面的配置后，其请求链路如下所示：
@@ -65,7 +67,7 @@ productpage → reviews:v1 (其他用户)
 
 点击下面的连接：
 
-{{TRAFFIC_HOST1_1234}}/productpage
+[productpage]({{TRAFFIC_HOST1_1234}}/productpage)
 
 此时发现使用 jason 这个用户登录访问时， Reviews 部分显示了错误消息：
 
@@ -81,7 +83,7 @@ Sorry, product reviews are currently unavailable for this book.
 
 点击下面的连接：
 
-{{TRAFFIC_HOST1_1234}}/productpage
+[productpage]({{TRAFFIC_HOST1_1234}}/productpage)
 
 此时发现使用 jason 这个用户登录访问时， 此时页面会显示如下错误消息：
 
