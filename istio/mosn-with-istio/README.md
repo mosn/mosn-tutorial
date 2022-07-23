@@ -1,10 +1,7 @@
-# Interactive Katacoda Scenarios
+# Interactive Killercoda Scenarios
 
-[![](http://shields.katacoda.com/katacoda/mosn/count.svg)](https://www.katacoda.com/mosn "Get your profile on Katacoda.com")
-
-Visit https://www.katacoda.com/mosn to view the profile and interactive scenarios
+Visit https://killercoda.com/mosn-tutorial/ to view the profile and interactive scenarios
 
 ### Writing Scenarios
-Visit https://www.katacoda.com/docs to learn more about creating Katacoda scenarios
+Visit https://killercoda.com/examples to learn more about creating Killer scenarios
 
-For examples, visit https://github.com/katacoda/scenario-example

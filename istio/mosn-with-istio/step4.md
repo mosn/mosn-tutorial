@@ -22,35 +22,21 @@ When the above status is Running, you can verify that the Bookinfo application i
 
 ## Deploy gateway
 
-Definition Ingress gateway.
-
 `kubectl apply -f samples/bookinfo/networking/bookinfo-gateway.yaml`{{execute}}
 
 Confirm the successful creation of the gateway.
 
 `kubectl get gateway`{{execute}}
 
-Set ingress IP.
+Start a ingress gateway in background, use port 1234 to access port 80
 
-`export INGRESS_HOST=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.status.loadBalancer.ingress[0].ip}')`{{execute}}
-
-Set ingress port.
-
-`export INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="http2")].port}')`{{execute}}
-
-Set `GATEWAY_URL`.
-
-`export GATEWAY_URL=$INGRESS_HOST:$INGRESS_PORT`{{execute}}
+`kubectl port-forward -n istio-system --address 0.0.0.0 service/istio-ingressgateway 1234:80 >/dev/null 2>&1 &`{{execute}}
 
 ## Confirmation installation
 
-The curl command can be used to confirm that the Bookinfo application can be accessed from outside the cluster:.
-
-`curl -s http://${GATEWAY_URL}/productpage | grep -o "<title>.*</title>"`{{execute}}
-
 It can be viewed by clicking on the following link.
 
-https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/productpage
+[productpage]({{TRAFFIC_HOST1_1234}}/productpage)
 
 ## Next steps
 
@@ -80,35 +66,21 @@ The above operation has completed the meshization of the Bookinfo application, a
 
 ## 部署 ingress
 
-定义 Ingress 网关：
-
 `kubectl apply -f samples/bookinfo/networking/bookinfo-gateway.yaml`{{execute}}
 
-确认网关成功创建：
+确认网关创建成功
 
 `kubectl get gateway`{{execute}}
 
-设置 ingress IP：
+在后台运行ingress 网关，通过1234端口转发到80端口
 
-`export INGRESS_HOST=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.status.loadBalancer.ingress[0].ip}')`{{execute}}
-
-设置 ingress 端口：
-
-`export INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="http2")].port}')`{{execute}}
-
-设置 `GATEWAY_URL`：
-
-`export GATEWAY_URL=$INGRESS_HOST:$INGRESS_PORT`{{execute}}
+`kubectl port-forward -n istio-system --address 0.0.0.0 service/istio-ingressgateway 1234:80 >/dev/null 2>&1 &`{{execute}}
 
 ## 确认访问
 
-可以用 curl 命令来确认是否能够从集群外部访问 `Bookinfo` 应用程序：
-
-`curl -s http://${GATEWAY_URL}/productpage | grep -o "<title>.*</title>"`{{execute}}
-
 可以点击下面的连接查看：
 
-https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/productpage
+[productpage]({{TRAFFIC_HOST1_1234}}/productpage)
 
 ## 后续步骤
 
